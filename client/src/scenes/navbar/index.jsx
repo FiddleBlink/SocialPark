@@ -39,7 +39,7 @@ const Navbar = () => {
 	const background = theme.palette.background.default;
 	const alt = theme.palette.background.alt;
 
-	// const fullName = `${user.firstName} ${user.lastName}`;
+	const fullName = `${user.firstName} ${user.lastName}`;
 
 	return (
         <FlexBetween padding="1em 6%" backgroundColor={alt}>
@@ -84,12 +84,12 @@ const Navbar = () => {
                     <Message sx={{ fontSize: "25px" }} />
                     <Notifications sx={{ fontSize: "25px" }} />
                     <Help sx={{ fontSize: "25px" }} />
-                    <FormControl variant="standard" value="Parth Bangde">
+                    <FormControl variant="standard" value={fullName}>
                         <Select
-                            value="Parth Bangde"
+                            value={fullName}
+                            autoWidth
                             sx={{
                                 backgroundColor: neutralLight,
-                                width: "150px",
                                 borderRadius: "0.25rem",
                                 padding: "0.25rem 1rem",
                                 "& .MuiSvgIcon-root": {
@@ -101,8 +101,8 @@ const Navbar = () => {
                                 },
                             }}
                             input={<InputBase />}>
-                            <MenuItem value="Parth Bangde">
-                                <Typography>Parth Bangde</Typography>
+                            <MenuItem value={fullName}>
+                                <Typography>{fullName}</Typography>
                             </MenuItem>
                             <MenuItem onClick={() => dispatch(setLogout())}>
                                 <Typography>Log out</Typography>
@@ -130,9 +130,7 @@ const Navbar = () => {
                     backgroundColor={background}>
                     {/* CLOSE ICON */}
                     <Box display="flex" justifyContent="flex-end" p="1rem">
-						<IconButton
-							onClick={() => setIsMobileMenuToggle(!isMobileMenuToggle)}
-						>
+                        <IconButton onClick={() => setIsMobileMenuToggle(!isMobileMenuToggle)}>
                             <Close />
                         </IconButton>
                     </Box>
@@ -154,12 +152,12 @@ const Navbar = () => {
                         <Message sx={{ fontSize: "25px" }} />
                         <Notifications sx={{ fontSize: "25px" }} />
                         <Help sx={{ fontSize: "25px" }} />
-                        <FormControl variant="standard" value="Parth Bangde">
+                        <FormControl variant="standard" value={fullName}>
                             <Select
-                                value="Parth Bangde"
+                                value={fullName}
+                                autoWidth
                                 sx={{
                                     backgroundColor: neutralLight,
-                                    width: "150px",
                                     borderRadius: "0.25rem",
                                     padding: "0.25rem 1rem",
                                     "& .MuiSvgIcon-root": {
@@ -171,8 +169,8 @@ const Navbar = () => {
                                     },
                                 }}
                                 input={<InputBase />}>
-                                <MenuItem value="Parth Bangde">
-                                    <Typography>Parth Bangde</Typography>
+                                <MenuItem value={fullName}>
+                                    <Typography>{fullName}</Typography>
                                 </MenuItem>
                                 <MenuItem onClick={() => dispatch(setLogout())}>
                                     <Typography>Log out</Typography>
