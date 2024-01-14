@@ -11,7 +11,7 @@ const LoginPage = () => {
                 width="100%"
                 backgroundColor={theme.palette.background.alt}
                 p="1rem 6%"
-                textAlgin="center">
+                textAlign="center">
                 <Typography fontWeight="bold" fontSize="32px" color="primary">
                     SocialPark
                 </Typography>
